@@ -1,1 +1,29 @@
-<p>recipe-list works!</p>
+<app-recipe-search></app-recipe-search>
+<div class="recipesContainer">
+  <div *ngFor="let recipe of recipes">
+    <div class="cardContainer">
+      <a [routerLink]="'/recipes/recipe/' + recipe.id">
+        <img
+          class="cardImage"
+          [src]="recipe.imageSrc"
+          alt="Picture of the author"
+        />
+      </a>
+      <div class="cardInfo">
+        <h2 class="cardTitle">{{ recipe.title }}</h2>
+        <div class="paragraphContainer">
+          <p class="cardParagraph">{{ recipe.steps[0] }}</p>
+          <a class="readMore" [routerLink]="'/recipes/recipe/' + recipe.id">read more...</a>
+        </div>
+        <div class="listContainer">
+          <h3 class="listHeading">Ingredients</h3>
+          <div class="listItem">
+            <span>{{ recipe.ingredients[0] }} | </span>
+            <span>{{ recipe.ingredients[1] }}</span>
+          </div>
+          <a class="listSpanMore" [routerLink]="'/recipes/recipe/' + recipe.id">..and more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div>
+  <div class="cardContainer">
+    <div class="cardTop">
+      <img
+        class="cardImage"
+        [src]="recipe.imageSrc"
+        alt="Picture of the author"
+      />
+      <div class="topTextContainer">
+        <h2 class="recipeTitle">{{ recipe.title }}</h2>
+        <h3 class="ingredientHeading">Ingredients</h3>
+        <ul class="ingredientList">
+          <li *ngFor="let ingredient of recipe.ingredients">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div *ngFor="let step of recipe.steps; index as i" class="stepContainer">
+      <h3>Step {{ i + 1 }}</h3>
+      <p class="stepParagraph">
+        {{ step }}
+      </p>
+    </div>
+  </div>
+</div>

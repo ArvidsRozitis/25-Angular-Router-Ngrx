@@ -1,1 +1,14 @@
-<p>featured-recipe-list works!</p>
+<div class="featuredListContainer">
+  <h2 class="featuredListHeading">Featured</h2>
+  <div *ngFor="let recipe of featuredRecepies">
+    <a
+      class="featuredItemContainer"
+      [routerLink]="'/recipes/recipe/' + recipe.id"
+    >
+      <h3 class="featuredItemHeading">{{ recipe.title }}</h3>
+      <div class="featuredImage">
+        <img [src]="recipe.imageSrc" [alt]="recipe.title" />
+      </div>
+    </a>
+  </div>
+</div>
