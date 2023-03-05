@@ -5,7 +5,7 @@
   padding: 10px 0;
 }
 .cardTop {
-    display: flex;
+  display: flex;
 }
 
 .cardContainer {
@@ -17,10 +17,8 @@
   gap: 20px;
   padding-right: 20px;
   transition: box-shadow 0.25s background-color 0.2s;
-  &:hover {
-    box-shadow: 0px 3px 3px grey;
-    background-color: wheat;
-  }
+  box-shadow: 0px 3px 3px grey;
+  background-color: wheat;
 }
 .cardImage {
   position: relative;
@@ -40,7 +38,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 10px;
-
 }
 .stepParagraph {
   position: relative;
