@@ -27,5 +27,14 @@
         {{ step }}
       </p>
     </div>
+    <div class="bottomContainer">
+      <button
+        class="deleteButton"
+        [routerLink]="'/recipes/allRecipes'"
+        (click)="removeRecipe()"
+      >
+        delete this recipe
+      </button>
+    </div>
   </div>
 </div>

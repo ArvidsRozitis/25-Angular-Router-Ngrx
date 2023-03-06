@@ -33,7 +33,7 @@ import { TestCounterComponent } from './test-counter/test-counter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ recipe: recipeReducer },{}),
+    StoreModule.forRoot({ recipes: recipeReducer },{}),
   ],
   providers: [],
   bootstrap: [AppComponent],

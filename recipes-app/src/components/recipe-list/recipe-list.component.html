@@ -1,6 +1,6 @@
 <app-recipe-search></app-recipe-search>
 <div class="recipesContainer">
-  <div *ngFor="let recipe of recipes">
+  <div *ngFor="let recipe of recipes$ | async">
     <div class="cardContainer">
       <a [routerLink]="'/recipes/recipe/' + recipe.id">
         <img

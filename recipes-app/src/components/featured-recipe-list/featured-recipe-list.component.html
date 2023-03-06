@@ -1,6 +1,6 @@
 <div class="featuredListContainer">
   <h2 class="featuredListHeading">Featured</h2>
-  <div *ngFor="let recipe of featuredRecepies">
+  <div *ngFor="let recipe of recipes$ | async">
     <a
       class="featuredItemContainer"
       [routerLink]="'/recipes/recipe/' + recipe.id"
