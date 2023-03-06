@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { recipeReducer } from '../store/recipes.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { RecipeSearchComponent } from '../components/recipe-search/recipe-search
 import { NavigationComponent } from '../components/navigation/navigation.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { SingleRecipePageComponent } from '../pages/single-recipe-page/single-recipe-page.component';
-import { TestpagesComponent } from '../pages/testpages/testpages.component';
+import { TestCounterComponent } from './test-counter/test-counter.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,14 @@ import { TestpagesComponent } from '../pages/testpages/testpages.component';
     NavigationComponent,
     FooterComponent,
     SingleRecipePageComponent,
-    TestpagesComponent
+    TestCounterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ recipe: recipeReducer },{}),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
